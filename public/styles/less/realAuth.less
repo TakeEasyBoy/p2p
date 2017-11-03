@@ -1,0 +1,51 @@
+/**
+ * 实名验证
+ */
+@charset "UTF-8";
+.cg-realAuth-section{
+  //自定义文件上传按钮,
+  //思路:将输入框定义为跟按钮大小相同,同时把它设置为透明
+  //然后在设置其跟按钮一个位置,这样就是一种错觉,使得点击按钮的
+  //点击了上传文件
+  .cg-auth-idPhoto-left,
+  .cg-auth-idPhoto-right{
+    &>button{
+      width: 100px;
+      /*height: 40px;
+      line-height: 40px;*/
+      position: absolute;
+      top: 5px;
+      left: 60px;
+      cursor: pointer;
+    }
+    position:relative;
+    display: inline-block;
+    margin-right: 10px;
+    width: 200px;
+    height: 200px;
+    border: solid 1px #ccc;
+    //overflow: hidden;
+    input{
+      opacity: 0;
+      width: 100px;
+      height: 34px;
+      position: absolute;
+      top: 5px;
+      left: 60px;
+      overflow: hidden;//隐藏多余部分的输入框
+    }
+    .upload-show{
+
+      width: 200px;
+      height: 150px;
+      position: absolute;
+      border-top: 1px solid #ccc;
+      bottom: 0px;
+      img{
+        vertical-align: middle;
+        width: 200px;
+        height: 149px;
+      }
+    }
+  }
+}

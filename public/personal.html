@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <!-- 定义视口-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 引入框架样式文件-->
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css"/>
+    <!-- 引入自定义样式-->
+    <link rel="stylesheet" href="dist/css/core.min.css"/>
+    <!-- 引入字体库-->
+    <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css"/>
+
+    <title>P2P-个人中心</title>
+</head>
+<body>
+    <!-- header-->
+    <header class="cg-header navbar navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span>
+                    <i>028-12345678</i>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">小强</a></li>
+                    <li><a href="#">赶快充值</a></li>
+                    <li><a href="#">注销</a></li>
+                    <li><a href="#">帮助</a></li>
+                    <li>
+                        <a href="#" id="contact"
+                           data-toggle="tooltip" data-html="true" data-placement="bottom" title="<img src='dist/images/contract.png' style='width:120px'/>">
+                           <span>联系客服</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- header-->
+    <nav class="cg-nav navbar">
+        <div class="navbar-header">
+            <a href=""><img src="dist/images/logo.png" alt="贷款找我哦" /></a>
+        </div>
+        <div class="container">
+            <ul class="nav navbar-nav">
+                <li role="presentation"><a href="index.html">首页</a></li>
+                <li role="presentation"><a href="borrow.html">我要投资</a></li>
+                <li role="presentation"><a href="borrow_apply.html">我要借款</a></li>
+                <li role="presentation" class="active"><a href="personal.html">个人中心</a></li>
+                <li role="presentation"><a href="#">新手指引</a></li>
+                <li role="presentation"><a href="#">关于我们</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- main-->
+    <section class="cg-personal-section container">
+        <div class="row cg-offcanvas">
+            <!-- 侧栏nav-->
+            <div class=" col-sm-3 cg-offcanvas-left ">
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                投资项目
+                            </a>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                            <ul class="">
+                                <li><a href="#"><span>投资项目</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                借款项目
+                            </a>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <ul>
+                                <li><a href="bid_request.html"><span>借款项目</span></a></li>
+                                <li><a href="borrowBidReturn_list.html"><span>还款明细</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">我的账户</a>
+                        </div>
+                        <div id="collapseThree" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThree">
+                            <ul>
+                                <li  class="active"><a href="personal.html">账户信息</a></li>
+                                <li><a href="realAuth.html">实名认证</a></li>
+                                <li><a href="#">银行卡管理</a></li>
+                                <li><a href="#">登录记录</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="heading4">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse4" aria-expanded="false" aria-controls="collapse4">资产详情</a>
+                        </div>
+                        <div id="collapse4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading4">
+                            <ul>
+                                <li><a href="accountFlow_list.html">账户流水</a></li>
+                                <li><a href="recharge_list.html">充值明细</a></li>
+                                <li><a href="money_withdraw_list.html">提现记录</a></li>
+                                <li><a>收款明细</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="heading5">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse5" aria-expanded="false" aria-controls="collapse5">个人资料</a>
+                        </div>
+                        <div id="collapse5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading5">
+                            <ul>
+                                <li><a href="userInfo.html">个人资料</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 右侧个人信息-->
+            <div class="col-sm-9 cg-offcanvas-right cg-personal">
+                <!-- 头像 个人信息-->
+                <!-- 左箭头,小屏显示 visible-xs-->
+                <button class="btn cg-offcanvas-btn btn-primary visible-xs">
+                     <i class="fa fa-angle-double-right"></i>
+                </button>
+                <!-- 标签切换-->
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">基本信息</a></li>
+                    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">收益详情</a></li>
+                </ul>
+
+                <!-- 切换的显示内容 -->
+                <div class="tab-content">
+                    <!-- 基本详情-->
+                    <div role="tabpanel" class="tab-pane active" id="home">
+                        <div class="cg-personal-info panel panel-title">
+                            <div class="pull-left cg-person-headimg">
+                                <img class="icon" src="dist/images/head_icon.jpg" alt="我是哈哈"/>
+                            </div>
+                            <div class="pull-left cg-person-headtext">
+                                <p>昵 称：源代码教育</p>
+                                <p> 用户名：小强</p>
+                                <p>最后登录时间：2016-10-25 15:30:10</p>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <!-- 账户余额-->
+                            <div class="cg-person-acount h4">
+                                <div class="col-sm-4">
+                                    总金额：<span class="text-primary">10000元</span>
+                                </div>
+                                <div class="col-sm-4">
+                                    可用金额：<span class="text-primary">8000元</span>
+                                </div>
+                                <div class="col-sm-4">
+                                    冻结金额：<span class="text-primary">2000元</span>
+                                </div>
+                            </div>
+                            <!-- 账户充值-->
+                            <div class="cg-person-operation text-center">
+                                <a href="#" class="btn btn-primary btn-lg active" role="button">账户充值</a>
+                                <a href="#" class="btn btn-danger btn-lg active" role="button">账户提现</a>
+                            </div>
+                            <!-- 认证-->
+                            <div class="cg-person-identify">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <div class="cg-person-identify-item01">
+                                        <p>实名认证</p>
+                                        <p>未认证 <a href="">马上认证</a></p>
+                                    </div>
+                                    <p>实名认证之后才能在平台投资</p>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="cg-person-identify-item02">
+                                        <p>手机认证</p>
+                                        <p>已认证 <a href="">查看</a></p>
+                                    </div>
+                                    <p>可以收到系统操作信息,并增加使用安全性</p>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="cg-person-identify-item03">
+                                        <p>邮箱认证</p>
+                                        <p>已认证 <a href="">查看</a></p>
+                                    </div>
+                                    <p>您可以设置邮箱来接收重要信息</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <div class="cg-person-identify-item04">
+                                        <p>VIP会员</p>
+                                        <p>未认证 <a href="">马上认证</a></p>
+                                    </div>
+                                    <p>VIP会员，让你更快捷的投资</p>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <!-- 定义报表的容器-->
+                    <div role="tabpanel" class="tab-pane" id="profile">
+                        <div id="echarts" class="col-sm-12"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- footer-->
+    <script src="footer.js"></script>
+</body>
+<!--延迟引入脚本文件 jquery-->
+<script src="lib/jquery/dist/jquery.min.js" type="text/javascript"></script>
+<!--bootstrap-->
+<script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<!--引入报表-->
+<script src="lib/echarts/dist/echarts.min.js"></script>
+<!--<script src="http://echarts.baidu.com/build/dist/echarts-all.js"></script>-->
+<script type="text/javascript">
+    $(function () {
+        //调用显示下拉菜单的方法,显示联系图片
+        $('#contact').tooltip();
+        //手机端左侧滑动效果
+        ;(function(){
+            var flowflag = false;//用于存放当前的状态
+            $('.cg-offcanvas-btn').on('click.toleft',function(){//使用事件命名空间的方式
+                if(!flowflag){
+                    flowflag = true;
+                    //更换箭头指向
+                    $(this).find('i').removeClass('fa-angle-double-right').addClass('fa-angle-double-left');
+                }else{
+                    flowflag = false;
+                    $(this).find('i').removeClass('fa-angle-double-left').addClass('fa-angle-double-right');
+                }
+                $('.cg-offcanvas').toggleClass('cg-offcanvas-active');
+            });
+            //手机端触摸事件,实现手机端手指滑动,界面的侧滑功能
+            var startX,endX;    //定义开始结束距离
+            var minMove = 30;   //结束的最小距离
+            $(document).on('touchstart',function(e){    //定义手机端触摸开始事件
+                console.dir(e);
+                startX = parseInt(e.originalEvent.changedTouches[0].pageX);
+                console.log(startX);
+            });
+            $(document).on('touchend',function(e){    //定义手机端触摸开始事件
+//            console.dir(e);
+                endX = parseInt(e.originalEvent.changedTouches[0].pageX);
+                console.log(endX);
+                if(endX - startX > minMove){
+                    $(this).trigger('touchSlide');
+                }
+            });
+            $(document).on('touchSlide',function(){
+                console.log("touchSlide");
+                $('.cg-offcanvas-btn').trigger('click.toleft');
+            });
+        })();
+//        bootstrap的一个tab触发事件,在加载玩tab标签后再执行显示报表,否则无法正常显示报表
+        //另外一种方式就是使用行内样式设置固定的宽高就能显示
+        $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+           /* e.target // newly activated tab
+            e.relatedTarget // previous active tab*/
+            //        引入报表
+//        console.log($("#echarts"));
+//            这里init的参数不能使用jquery,必须使用原生的js
+            var myChart = echarts.init(document.querySelector("#echarts"));
+//        引入数据
+            var option = {
+                title : {
+                    text: '收入详情',
+                    subtext: '某宝收入详情',
+                    x:'center'
+                },
+                tooltip : {
+                    trigger: 'item',
+                    formatter: "{a} <br/>{b} : {c} ({d}%)"
+                },
+                legend: {
+                    orient : 'vertical',
+                    x : 'left',
+                    data:['余额宝','微信零钱','哈哈理财','JDK','XXX保险']
+                },
+                toolbox: {
+                    show : true,
+                    feature : {
+                        mark : {show: true},
+                        dataView : {show: true, readOnly: false},
+                        magicType : {
+                            show: true,
+                            type: ['pie', 'funnel'],
+                            option: {
+                                funnel: {
+                                    x: '25%',
+                                    width: '50%',
+                                    funnelAlign: 'left',
+                                    max: 1548
+                                }
+                            }
+                        },
+                        restore : {show: true},
+                        saveAsImage : {show: true}
+                    }
+                },
+                calculable : true,
+                series : [
+                    {
+                        name:'收入详情',
+                        type:'pie',
+                        radius : '55%',
+                        center: ['50%', '60%'],
+                        data:[
+                            {value:335, name:'余额宝'},
+                            {value:310, name:'微信零钱'},
+                            {value:234, name:'哈哈理财'},
+                            {value:135, name:'JDK'},
+                            {value:1548, name:'XXX保险'}
+                        ]
+                    }
+                ]
+            };
+//        myChart.showLoading();    //数据加载完之前先显示一段简单的loading动画
+            // 为echarts对象加载数据
+            myChart.setOption(option);
+        })
+
+    })
+</script>
+</html>

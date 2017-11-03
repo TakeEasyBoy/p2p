@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+@media (max-width:768px){
+  //设置内容盒子的定位属性
+  .cg-offcanvas{
+    position: relative;
+    left: 0;
+    -webkit-transition: left 1s;
+    -moz-transition: left 1s;
+    -ms-transition: left 1s;
+    -o-transition: left 1s;
+    transition: left 1s;
+  }
+  //设置按钮的样式,定位到内容盒子
+  .cg-offcanvas-btn{
+    padding: 30px 8px;
+    position: absolute;
+    top: 50%-20px;
+    z-index: 999;
+  }
+  .cg-offcanvas-left{
+    position: absolute;
+    left: -50%;
+    width: 50%;
+  }
+  .cg-offcanvas-active{
+    left: 50%;
+  }
+}
+

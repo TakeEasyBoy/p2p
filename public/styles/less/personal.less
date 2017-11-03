@@ -1,0 +1,70 @@
+@charset "UTF-8";
+@basegraycolor:#ccc;
+@baseurl:"../images";
+.cg-personal-section{
+  overflow-x: hidden;
+  .cg-personal{
+    //border: 1px solid @basegraycolor;
+
+    border-radius: 4px;
+    .cg-personal-info{
+      overflow: hidden;
+      padding: 10px;
+      //头像内部padding 10撑开
+      .cg-person-headimg{
+        border: 1px solid @basegraycolor;
+        padding: 10px;
+        //头像大小限制为72
+        .icon{
+          width: 72px;
+          height: 72px;
+        }
+      }
+      //个人信息的文字部分
+      .cg-person-headtext{
+        padding-left: 10px;
+        padding-top: 10px;
+      }
+    }
+    //账户余额
+    .cg-person-acount{
+      padding-top: 10px;
+      border-top:1px solid @basegraycolor;
+    }
+    .cg-person-operation{
+      height: 80px;
+      line-height: 80px;
+      margin-top: 10px;
+    }
+    .cg-person-identify{
+      margin-top: 30px;
+      //每个图片使用背景定位
+      .cg-person-identify-item01{
+        background:url("@{baseurl}/shiming.png") no-repeat;
+        background-position-y: center;
+        padding-left: 60px;
+      }
+      .cg-person-identify-item02{
+        background:url("@{baseurl}/shouji.jpg") no-repeat;
+        background-position-y: center;
+        padding-left: 60px;
+      }
+      .cg-person-identify-item03{
+        background:url("@{baseurl}/youxiang.jpg") no-repeat;
+        background-position-y: center;
+        padding-left: 60px;
+      }
+      .cg-person-identify-item04{
+        background:url("@{baseurl}/baozhan.jpg") no-repeat;
+        background-position-y: center;
+        padding-left: 60px;
+      }
+    }
+  }
+  #echarts{
+    height:400px ;
+    //width: 600px;
+    //border: solid 1px red;
+
+  }
+}

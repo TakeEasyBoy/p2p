@@ -1,0 +1,66 @@
+@charset "UTF-8";
+@basecolor:#00a8ff;
+@mutecolor:#999;
+.cg-borrowinfo-section{
+  margin-bottom: 30px;
+
+  .container{
+    .row{
+      .col-sm-6{
+        h3{
+          margin-top: 5px;
+        }
+        table{
+          tr{
+            height: 45px;
+            td{
+              min-width:80px;
+              margin-right: 10px;
+              font-size:16px;
+              &:nth-of-type(1){
+                color:@basecolor;
+              }
+              &:nth-of-type(2){
+                color:@mutecolor;
+              }
+            }
+          }
+        }
+      }
+      .col-sm-3{
+        table{
+          tr{
+            height: 45px;
+            td{
+              min-width:150px;
+              margin-right: 10px;
+              font-size:16px;
+              &:nth-of-type(1){
+                color:@mutecolor;
+
+              }
+              &:nth-of-type(2){
+                color:@basecolor;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  //借款人信息
+  .cg-borrowinfo-table{
+    .panel{
+      .table{
+        tbody{
+          color:@mutecolor;
+          tr{
+            td{
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

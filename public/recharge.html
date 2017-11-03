@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <!-- 定义视口-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 引入框架样式文件-->
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css"/>
+    <!-- 引入自定义样式-->
+    <link rel="stylesheet" href="dist/css/core.min.css"/>
+    <title>P2P首页</title>
+</head>
+<body>
+    <!-- header-->
+    <header class="cg-header navbar navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span>
+                    <i>028-12345678</i>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">首页</a></li>
+                    <li><a href="login.html">登陆</a></li>
+                    <li><a href="register.html">快速注册</a></li>
+                    <li><a href="#">帮助</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- header-->
+    <nav class="cg-login-nav cg-nav navbar">
+        <div class="navbar-header">
+            <a href="index.html"><img src="dist/images/logo.png" alt="贷款找我哦" /></a>
+            <span>账户充值</span>
+        </div>
+    </nav>
+    <!-- main-->
+    <section class="cg-recharge-section container">
+        <!-- 顶部tip-->
+        <div class="bs-callout-primary bs-callout cg-recharge-title">
+            <h3 class="text-primary">账户充值</h3>
+            <p>1. 由于银行系统的限制，充值功能建议使用 IE 内核（IE8及以上）的浏览器。</p>
+            <p>2. 请注意：为打击信用卡套现行为，充值资金必须经过投资回款后方能允许提现。</p>
+        </div>
+        <!-- 充值方式选择-->
+        <div class="cg-chager-method">
+            <ul class="nav nav-tabs" role="tablist" id="recharge_tab">
+                <li role="presentation" >
+                    <a href="#offline" aria-controls="offline" role="tab" data-toggle="tab">
+                        线下充值
+                    </a>
+                </li>
+                <li role="presentation" class="active">
+                    <a href="#online" aria-controls="online" role="tab" data-toggle="tab">
+                        线上充值（第三方平台）
+                    </a>
+                </li>
+            </ul>
+            <!-- 线上线下方式切换 -->
+            <div class="tab-content cg-tab-content">
+                <div role="tabpanel" class="tab-pane " id="offline">
+                    <p class="text-center text-danger h2">系统暂不支持，请采用线下充值</p>
+                </div>
+                <!-- 线上银行卡充值方式-->
+                <div role="tabpanel" class="tab-pane active" id="online">
+                    <table class="table table-responsive">
+                        <thead>
+                            <tr>
+                                <th>银行名称</th>
+                                <th>开户人姓名</th>
+                                <th>银行帐号</th>
+                                <th>开户行支行名称</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="bankpos bankguangzhou"></td>
+                                <td>源代码</td>
+                                <td>62170038233428412750</td>
+                                <td>府城大道支行</td>
+                            </tr>
+                            <tr>
+                                <td class="bankpos bankjianshe"></td>
+                                <td>中石化</td>
+                                <td>12345678945612345312</td>
+                                <td>府城大道支行</td>
+                            </tr>
+                            <tr>
+                                <td class="bankpos bankofchina"></td>
+                                <td>源代码</td>
+                                <td>62170038233428412750</td>
+                                <td>府城大道支行</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- 绑定银行卡的步骤-->
+                    <div class="charge-describe text-info">
+                        <h4 >第一步:</h4>
+                        <p>请选择往以上一个账号汇款或转账您所要充值的金额（若您是跨行转账，推荐选择建行）。注：请保存您的交易记录信息。</p>
+                        <h4> 第二步:</h4>
+                        <p>款或转账成功后，再选择你所汇款或转账的账号，并填写以下完整的信息后，提交您的线下充值申请。我们将会在下个工作日核对您的申请。</p>
+                    </div>
+                    <!-- -->
+                    <form class="form-horizontal">
+                        <!-- 开户银行-->
+                        <div class="form-group">
+                            <label for="bankname" class="col-sm-2 control-label">银行</label>
+                            <div class="col-sm-6">
+                                <select class="form-control" name="" id="bankname">
+                                    <option value="">工商银行(62170038233428412750)府城大道支行</option>
+                                    <option value="">农业银行(62170038233428412750)府城大道支行</option>
+                                    <option value="">招商银行(62170038233428412750)府城大道支行</option>
+                                    <option value="">建设银行(62170038233428412750)府城大道支行</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- 交易号码-->
+                        <div class="form-group">
+                            <label for="dealnum" class="col-sm-2 control-label">交易号</label>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" id="dealnum" >
+                            </div>
+                        </div>
+                        <!-- 充值时间  插件有待完善-->
+                        <div class="form-group">
+                            <label for="dealnum" class="col-sm-2 control-label">充值时间</label>
+                            <div class="col-sm-6">
+                                <input type="datetime-local" class="form-control datepicker" id="dealnum" >
+                            </div>
+                        </div>
+                        <!-- 充值金额-->
+                        <div class="form-group">
+                            <label for="dealnum" class="col-sm-2 control-label">充值金额</label>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" id="dealnum" >
+                            </div>
+                        </div>
+                        <!-- 说明-->
+                        <div class="form-group">
+                            <label for="charge_descibe" class="col-sm-2 control-label">说明</label>
+                            <div class="col-sm-6">
+                                <textarea class="form-control" name="" id="charge_descibe"  rows="3" style="resize: none"></textarea>
+                            </div>
+                        </div>
+                    </form>
+                    <p class="col-sm-offset-2">
+                        <button type="button" id="confirmCharge" class="btn btn-primary">确认提交</button>
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- footer-->
+    <script src="footer.js"></script>
+</body>
+<!--延迟引入脚本文件 jquery-->
+<script src="lib/jquery/dist/jquery.min.js" type="text/javascript"></script>
+<!--bootstrap-->
+<script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<script>
+    $(function () {
+        //调用显示下拉菜单的方法,显示联系图片
+        $('#contact').tooltip();
+        //切换充值方式
+        $('#recharge_tab a').click(function (e) {
+            e.preventDefault();
+            console.dir($(this));
+            $(this).tab('show');
+        })
+    })
+</script>
+</html>

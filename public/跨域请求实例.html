@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>跨域访问</title>
+    <meta charset="UTF-8"/>
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+</head>
+<script>
+    //定义跨域访问的回调函数,豆瓣返回的jsonp回调函数参数放在了data中
+    var getdouban = function(data){
+        console.log(data);
+    }
+    //通过点击a链接,调用利用script标签请求豆瓣数据的函数,同时将callback=getdouban传递过去,豆瓣将返回jsonp格式的数据
+    function getData(){
+        //动态创建script标签
+        var script = document.createElement('script');
+        //通过src属性请求豆瓣的数据,同时将callback函数传过去,豆瓣会返回一个数据回来
+        var url = "https://api.douban.com//v2/movie/celebrity/1054395?callback=getdouban";
+        script.setAttribute('src', url);
+
+        //将其插入头部
+        document.getElementsByTagName('head')[0].appendChild(script);
+    }
+
+</script>
+<body>
+<a href="javascript:getData();">点我 </a>
+
+</body>
+</html>

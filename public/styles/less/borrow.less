@@ -1,0 +1,38 @@
+@charset "UTF-8";
+@baseurl:"../images";
+@basecolor:#00a8ff;
+.cg-borrow-section{
+  .row{
+    .panel-heading{
+      background-color: #40D47E;
+      .panel-title{
+        color:#fff;
+        font-size: 24px;
+      }
+    }
+    .cg-panelheading01{
+      background-color: #EC7E20;
+    }
+    .cg-panelheading02{
+      background-color: #2CA2EE;
+    }
+    .cg-identify-img{
+      padding-left: 20px;
+      //设置用户头像的样式
+      li{
+        list-style: none;
+        background: url("@{baseurl}/sequare.png") no-repeat;
+        background-position-y: center;
+        padding-left: 20px;
+        height: 30px;
+        line-height: 30px;
+      }
+    }
+    .cg-request-btn{
+      .btn-info{
+        background-color: @basecolor;
+        border-radius: 15px;
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+
+.cg-borrowapply-section{
+  //设置定位属性,方便右侧panel定位
+  .cg-borrow-pos{
+    position: relative;
+  }
+  .cg-borrowapply-title{
+    background-color: #F4F8FA;
+  }
+  .cg-borrowapply-head{
+    padding-bottom: 9px;
+    margin: 40px 0 20px;
+    border-bottom: 1px solid #eee;
+  }
+  #cg-borapply-sidebar{
+    position: absolute;
+    top: 240px;
+    right: 110px;
+  }
+}
+//手机端时,取消右panel面板的定位属性,让其回归文本流
+/*
+@media (max-width: 768px){
+  #cg-borapply-sidebar{
+    position: static;
+    top:0px;
+    right: 0px;
+  }
+}*/

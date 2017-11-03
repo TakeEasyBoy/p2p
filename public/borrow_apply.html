@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <!-- 定义视口-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 引入框架样式文件-->
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css"/>
+    <!-- 引入自定义样式-->
+    <link rel="stylesheet" href="dist/css/core.min.css"/>
+    <title>P2P-个人中心-信用借款</title>
+</head>
+<body>
+    <!-- header-->
+    <header class="cg-header navbar navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span>
+                    <i>028-12345678</i>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">小强</a></li>
+                    <li><a href="#">赶快充值</a></li>
+                    <li><a href="#">注销</a></li>
+                    <li><a href="#">帮助</a></li>
+                    <li>
+                        <a href="#" id="contact"
+                           data-toggle="tooltip" data-html="true" data-placement="bottom" title="<img src='dist/images/contract.png' style='width:120px'/>">
+                           <span>联系客服</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- header-->
+    <nav class="cg-nav navbar">
+        <div class="navbar-header">
+            <a href=""><img src="dist/images/logo.png" alt="贷款找我哦" /></a>
+        </div>
+        <div class="container">
+            <ul class="nav navbar-nav">
+                <li role="presentation"><a href="index.html">首页</a></li>
+                <li role="presentation"><a href="borrow.html">我要投资</a></li>
+                <li role="presentation" class="active"><a href="bid_request.html">我要借款</a></li>
+                <li role="presentation"><a href="personal.html">个人中心</a></li>
+                <li role="presentation"><a href="#">新手指引</a></li>
+                <li role="presentation"><a href="#">关于我们</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- main-->
+    <section class="cg-borrowapply-section container">
+        <div class="row">
+            <!-- 侧栏nav-->
+            <div class=" col-sm-3 cg-offcanvas-left ">
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                投资项目
+                            </a>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                            <ul>
+                                <li  class="active"><a href="#"><span>投资项目</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                借款项目
+                            </a>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <ul>
+                                <li><a href="bid_request.html"><span>借款项目</span></a></li>
+                                <li><a href="borrowBidReturn_list.html"><span>还款明细</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">我的账户</a>
+                        </div>
+                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <ul>
+                                <li><a href="personal.html">账户信息</a></li>
+                                <li><a href="realAuth.html">实名认证</a></li>
+                                <li><a href="#">银行卡管理</a></li>
+                                <li><a href="#">登录记录</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="heading4">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse4" aria-expanded="false" aria-controls="collapse4">资产详情</a>
+                        </div>
+                        <div id="collapse4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading4">
+                            <ul>
+                                <li><a href="accountFlow_list.html">账户流水</a></li>
+                                <li><a href="recharge_list.html">充值明细</a></li>
+                                <li><a href="money_withdraw_list.html">提现记录</a></li>
+                                <li><a>收款明细</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="heading5">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse5" aria-expanded="false" aria-controls="collapse5">个人资料</a>
+                        </div>
+                        <div id="collapse5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading5">
+                            <ul>
+                                <li><a href="userInfo.html">个人资料</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-9 cg-borrow-pos">
+                <div class="bs-callout-info bs-callout cg-borrowapply-title">
+                    <h3 class="text-primary">信用借款 </h3>
+                    <p>
+                        授信额度：<span class="text-danger">2000</span>     可借金额：<span class="text-danger">2000</span>
+                    </p>
+                </div>
+                <h3 class="cg-borrowapply-head">借款信息<span class="label label-primary">信用标</span></h3>
+                <form class="form-horizontal">
+                    <div class="form-group ">
+                        <label for="borrow-counts" class="col-sm-2 col-sm-offset-1 control-label">借款金额</label>
+                        <div class="col-sm-3 input-group">
+                            <input type="text" class="form-control"  aria-describedby="borrow-counts">
+                            <span class="input-group-addon" id="borrow-counts">元</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group ">
+                        <label for="borrow-counts" class="col-sm-2 col-sm-offset-1 control-label">借款利息</label>
+                        <div class="col-sm-3 input-group">
+                            <input type="text" class="form-control"  aria-describedby="borrow-counts">
+                            <span class="input-group-addon" id="borrow-counts">%</span>
+                        </div>
+                    </div>
+                    <!-- 下拉框输入按钮-->
+                    <div class="form-group ">
+                        <label for="borrow-deadline" class="col-sm-2 col-sm-offset-1 control-label">借款期限</label>
+                        <div class="col-sm-3 input-group">
+                            <select name="" id="borrow-deadline" class="form-control"  aria-describedby="borrow-deadline">
+                                <option value=""></option>
+                                <option value="">1</option>
+                                <option value="">3</option>
+                                <option value="">6</option>
+                                <option value="">9</option>
+                                <option value="">12</option>
+                                <option value="">24</option>
+                            </select>
+                            <span class="input-group-addon" id="borrow-counts">月</span>
+                        </div>
+                    </div>
+                    <!-- 单选框输入按钮-->
+                    <div class="form-group ">
+                        <label for="bid-method1" class="col-sm-2 col-sm-offset-1 control-label">还款方式</label>
+                        <div class="col-sm-3 ">
+                            <lable class="radio-inline"><input type="radio" checked="checked" name="bid-method" id="bid-method1" value="0" >按月分期</lable>
+                            <lable class="radio-inline"><input type="radio" name="bid-method" id="bid-method2" value="1">按月到期</lable>
+                        </div>
+                    </div>
+                    <!-- 最小投标-->
+                    <div class="form-group ">
+                        <label for="borrow-counts" class="col-sm-2 col-sm-offset-1 control-label">最小投标</label>
+                        <div class="col-sm-3 input-group">
+                            <input type="text" class="form-control"  aria-describedby="min-bid">
+                            <span class="input-group-addon" id="borrow-counts">元</span>
+                        </div>
+                    </div>
+                    <!-- 投标奖金-->
+                    <div class="form-group ">
+                        <label for="borrow-counts" class="col-sm-2 col-sm-offset-1 control-label">投标奖金</label>
+                        <div class="col-sm-3 input-group">
+                            <input type="text" class="form-control"  aria-describedby="borrow-counts" placeholder="0">
+                            <span class="input-group-addon" id="borrow-counts">%</span>
+                        </div>
+                    </div>
+                    <!-- 招标天数-->
+                    <div class="form-group ">
+                        <label for="borrow-counts" class="col-sm-2 col-sm-offset-1 control-label">招标天数</label>
+                        <div class="col-sm-3 input-group">
+                            <select name="" id="zb-dayscount" class="form-control"  aria-describedby="borrow-deadline">
+                                <option value=""></option>
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                                <option value="">4</option>
+                                <option value="">5</option>
+                                <option value="">6</option>
+                                <option value="">7</option>
+                                <option value="">8</option>
+                                <option value="">9</option>
+                                <option value="">10</option>
+                                <option value="">11</option>
+                                <option value="">12</option>
+                            </select>
+                            <span class="input-group-addon" id="borrow-counts">天</span>
+                        </div>
+                    </div>
+                    <!-- 借款标题-->
+                    <div class="form-group ">
+                        <label for="borrow-counts" class="col-sm-2 col-sm-offset-1 control-label">借款标题</label>
+                        <div class="col-sm-6 input-group">
+                            <input type="text" class="form-control" id="borrow-title" aria-describedby="borrow-counts" >
+                        </div>
+                    </div>
+                    <!-- 借款标题,文本框不能被用户拖动,增加resize属性为none-->
+                    <div class="form-group ">
+                        <label for="borrow-describe" class="col-sm-2 col-sm-offset-1 control-label">借款标题</label>
+                        <div class="col-sm-6 input-group">
+                            <textarea class="form-control" name="" id="borrow-describe"  rows="3" style="resize: none"></textarea>
+                        </div>
+                    </div>
+                </form>
+                <div id="cg-borapply-sidebar" class="panel panel-default col-sm-4">
+                    <div class="panel-body">
+                        <h3>相关费用</h3>
+                        <p class="text-primary">利息 --</p>
+                        <p class="text-primary">奖金 --</p>
+                        <p class="text-primary">管理费 --</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- footer-->
+    <script src="footer.js"></script>
+</body>
+<!--延迟引入脚本文件 jquery-->
+<script src="lib/jquery/dist/jquery.min.js" type="text/javascript"></script>
+<!--bootstrap-->
+<script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<script>
+    $(function () {
+        //调用显示下拉菜单的方法,显示联系图片
+        $('#contact').tooltip();
+    })
+</script>
+</html>

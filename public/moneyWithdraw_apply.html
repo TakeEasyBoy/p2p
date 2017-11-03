@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <!-- 定义视口-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 引入框架样式文件-->
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css"/>
+    <!-- 引入自定义样式-->
+    <link rel="stylesheet" href="dist/css/core.min.css"/>
+    <title>P2P首页</title>
+</head>
+<body>
+    <!-- header-->
+    <header class="cg-header navbar navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span>
+                    <i>028-12345678</i>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">首页</a></li>
+                    <li><a href="login.html">登陆</a></li>
+                    <li><a href="register.html">快速注册</a></li>
+                    <li><a href="#">帮助</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- header-->
+    <nav class="cg-login-nav cg-nav navbar">
+        <div class="navbar-header">
+            <a href="index.html"><img src="dist/images/logo.png" alt="贷款找我哦" /></a>
+            <span>账户提现</span>
+        </div>
+    </nav>
+    <!-- main-->
+    <section class="cg-recharge-section container">
+        <!-- 顶部tip-->
+        <div class="bs-callout-primary bs-callout cg-recharge-title">
+            <h3 class="text-primary">账户提现</h3>
+            <p>1. 本平台工作日会处理当天 17:00 之前的提款申请。</p>
+            <p>2. 为了确保银行转账成功，请您确认银行账号信息的 正确性。</p>
+            <p>3. 单笔提现范围-普通用户500.00 元 ~ 500000.00 元。</p>
+            <p>4. 单笔提现范围-VIP用户500.00 元 ~ 500000.00 元。</p>
+            <p>5. 目前提现服务费：1万元(含) 之内：2.00 元/笔；1万元（以上） ：5.00 元/笔。</p>
+            <p>6. 为避免信用卡套现，故充值15日内未投资提现按提现金额的0.4%收取提现费用。</p>
+            <p>7. 本次可提现 = 可用余额 - 净值保证金 - 不可提现金额 + 投标冻结 - 最高服务费 - 返还体验金</p>
+        </div>
+        <div class="row">
+            <div class="col-sm-3 col-sm-offset-1 h4">总金额：<span class="text-primary">10000元</span></div>
+            <div class="col-sm-4 h4">可提现金额：<span class="text-primary">8000元</span></div>
+            <div class="col-sm-4 h4">冻结金额：<span class="text-primary">2000元</span></div>
+        </div>
+        <!-- -->
+        <div class="cg-chager-method">
+            <div class="tab-content cg-tab-content">
+                <form class="form-horizontal">
+                    <!-- 开户银行-->
+                    <div class="form-group">
+                        <label for="bankname" class="col-sm-2 control-label">银行</label>
+                        <div class="col-sm-4">
+                            <select class="form-control" name="" id="bankname">
+                                <option value="">工商银行</option>
+                                <option value="">农业银行</option>
+                                <option value="">招商银行</option>
+                                <option value="">建设银行</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- 开户行-->
+                    <div class="form-group">
+                        <label for="bankOfDeposit" class="col-sm-2 control-label">开户行</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" id="bankOfDeposit" >
+                        </div>
+                    </div>
+                    <!-- 银行卡号  -->
+                    <div class="form-group">
+                        <label for="bankCardNum" class="col-sm-2 control-label">银行卡号</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" id="bankCardNum" >
+                        </div>
+                    </div>
+                    <!--户主姓名 -->
+                    <div class="form-group">
+                        <label for="hostName" class="col-sm-2 control-label">户主姓名</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" id="hostName" >
+                        </div>
+                    </div>
+                    <!-- 提现金额-->
+                    <div class="form-group">
+                        <label for="withDrawNum" class="col-sm-2 control-label">提现金额</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" id="withDrawNum" >
+                        </div>
+                    </div>
+                    <!--通知电话 -->
+                    <div class="form-group">
+                        <label for="infoPhone" class="col-sm-2 control-label">通知电话</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" id="infoPhone" >
+                        </div>
+                    </div>
+                </form>
+                <!-- 提交按钮-->
+                <p class="col-sm-offset-2">
+                    <button type="button" id="confirmChargeApply" class="btn btn-primary">确认提交</button>
+                </p>
+            </div>
+
+        </div>
+    </section>
+    <!-- footer-->
+    <script src="footer.js"></script>
+</body>
+<!--延迟引入脚本文件 jquery-->
+<script src="lib/jquery/dist/jquery.min.js" type="text/javascript"></script>
+<!--bootstrap-->
+<script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<script>
+    $(function () {
+        //调用显示下拉菜单的方法,显示联系图片
+        $('#contact').tooltip();
+        //切换充值方式
+        $('#recharge_tab a').click(function (e) {
+            e.preventDefault();
+            $(this).tab('show');
+        })
+    })
+</script>
+</html>

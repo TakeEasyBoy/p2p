@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <!-- 定义视口-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 引入框架样式文件-->
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css"/>
+    <!-- 引入自定义样式-->
+    <link rel="stylesheet" href="dist/css/core.min.css"/>
+    <title>P2P首页</title>
+</head>
+<body>
+    <!-- 模态框,需要放在body最高层级  弹出框-->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">实名添加用户</h4>
+                </div>
+                <div class="modal-body">
+                    <!-- 模态框渲染-->
+
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" id="authConfirm" class="btn btn-primary">提交</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- header-->
+    <header class="cg-header navbar navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span>
+                    <i>028-12345678</i>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">小强</a></li>
+                    <li><a href="#">赶快充值</a></li>
+                    <li><a href="#">注销</a></li>
+                    <li><a href="#">帮助</a></li>
+                    <li>
+                        <a href="#" id="contact"
+                           data-toggle="tooltip" data-html="true" data-placement="bottom" title="<img src='dist/images/contract.png' style='width:120px'/>">
+                           <span>联系客服</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- header-->
+    <nav class="cg-login-nav cg-nav navbar">
+        <div class="navbar-header">
+            <a href="index.html"><img src="dist/images/logo.png" alt="贷款找我哦" /></a>
+            <span>用户实名认证</span>
+        </div>
+    </nav>
+    <!-- main-->
+    <section class="cg-realAuthManage-section container">
+        <div class="panel panel-default">
+            <div class="panel-heading clearfix">
+                <span class="panel-title pull-left" style="padding-top: 5px">实名认证管理</span>
+                <button data-cmd="create" class="btn btn-primary pull-right" id="cg_addUser" data-toggle="modal" data-target="#myModal">添加</button>
+            </div>
+            <div class="panel-body">
+               <table class="table table-responsive table-hover">
+                   <thead>
+                       <tr>
+                           <th>姓名</th>
+                           <th>性别</th>
+                           <th>证件类型</th>
+                           <th>证件号码</th>
+                           <th>操作</th>
+                       </tr>
+                   </thead>
+                   <tbody id="authMange">
+
+                   </tbody>
+               </table>
+                <nav aria-label="Page navigation">
+                    <ul class="pagination" id="authPagelists">
+                        <!-- 页码-->
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </section>
+    <!-- footer-->
+    <footer class="cg-footer container-fluid">
+        <div class="row">
+            <div class="  col-sm-7 col-sm-offset-1">
+                <p>专业Java培训、PHP培训、UI培训、iOS培训、高级Web前端培训机构</p>
+                <p>版权所有： 2006-2015成都源代码教育咨询有限公司</p>
+                <address>地  址： 成都市高新区府城大道西段399号天府新谷1号楼620-625</address>
+                <p>电  话： 028-86261949  / 400-808-6840  邮箱： yuandaima@itsource.cn</p>
+                <p><a href="">蜀ICP备14030149号-1</a>  <a href="">蜀公网安备510114990541</a></p>
+            </div>
+            <div class="  col-sm-2">
+                <p>官方微博</p>
+                <p><a href="http://t.qq.com/"><img src="dist/images/sina.png" alt=""/></a></p>
+                <p><a href="http://weibo.com/"><img src="dist/images/tecent.png" alt=""/></a></p>
+            </div>
+            <div class="col-sm-2">
+                <p>官方微信</p>
+                <p><img src="dist/images/wx.jpg" alt=""/></p>
+            </div>
+        </div>
+    </footer>
+    <!-- 编写用户列表模版,渲染模版-->
+    <script type="text/html" id="Auth_temp">
+        {{each data as value index}}
+        <tr>
+            <!--<td>{{value.id}}</td>-->
+            <td>{{value.truename}}</td>
+            <td>{{value.gender}}</td>
+            <td>{{value.idType}}</td>
+            <td>{{value.idNumber}}</td>
+            <td>
+                <button class="btn btn-warning" data-cmd="edit" data-target="#myModal" data-toggle="modal">编辑</button>
+                <button class="btn btn-danger">删除</button>
+            </td>
+        </tr>
+        {{/each}}
+    </script>
+</body>
+<!--延迟引入脚本文件 jquery-->
+<script src="lib/jquery/dist/jquery.min.js" type="text/javascript"></script>
+<!--bootstrap-->
+<script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<!--引入tenplate.js-->
+<script src="dist/js/template.js"></script>
+<!--引入mock js 模拟后端返回的数据-->
+<script src="lib/mockjs/dist/mock-min.js"></script>
+<script type="text/javascript">
+    <!--定义mock模版-->
+    /*Random.id();
+    Mock.mock('@ID');*/
+    Mock.mock('http://p2pauth.com', {
+        "datas|102": [{ // 有几个数据对象
+            '_id|+1': 1, // 属性值自动加 1，初始值为1,不能使用 id mockjs自身就有的函数,否则下面调用id的时候id使用的就是这个数据
+            'truename': '@cname', // 中文名称
+            'gender|1': ['男', '女'], // 性别
+            'idType|1': ['身份证','军官证','驾驶证'], // 证件类型
+            'idNumber': '@id()' // 身份证,这个id是mock的方法,直接调用的话就可以生成身份证号码,
+        }]
+    });
+</script>
+<script type="text/javascript">
+    ;(function(){
+        var pageSize = 10;
+
+        function showpage(curpage){
+            $.get('http://p2pauth.com').done(function(data){
+//              console.log(data.datas);
+                data = JSON.parse(data);
+//              console.log(data.datas.length);
+
+                var itemslength = data.datas.length;//定义总的数据大小
+                var pagecount = Math.ceil(itemslength/pageSize);//定义总的页数
+//              console.log(pagecount);
+                //定义起始下标
+                var start = (curpage - 1) * pageSize;
+                //定义结束下标
+                var end = Math.min(start + pageSize,itemslength);
+                //上一页 在当前页数+1和第一页的最大值产生
+                var pre = Math.max(curpage-1,1);
+                //下一页  在当前页数和总页数最小值之间产生
+                var next = Math.min(curpage+1,pagecount);
+                //保存当前缓存
+                var curitems = [];
+                for(var i = start;i < end;i++){
+                    curitems.push(data.datas[i]);
+                }
+//                console.log(curitems);
+                //拼接数据
+                var html = template("Auth_temp",{"data":curitems});
+                //渲染模版
+                $("#authMange").html(html);
+                //分页列表
+                var pagehtml = '';
+                //上一页
+                if(curpage <= 1){
+                    pagehtml += '<li class="disabled"><a href="javascript:showpage('+pre+')" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>';
+                }else{
+                    pagehtml += '<li><a href="javascript:showpage('+pre+')" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>';
+                }
+
+                //页码
+                for(var i = 1;i <= pagecount;i++){
+                    if(curpage == i){
+                        pagehtml += '<li class=" active"><a href="javascript:showpage('+i+')">'+i+'</a></li>'
+                    }else{
+                        pagehtml += '<li><a href="javascript:showpage('+i+')">'+i+'</a></li>'
+                    }
+                }
+                //下一页
+                if(curpage >= pagecount){
+                    pagehtml += '<li class="disabled"><a href="javascript:showpage('+next+')" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>';
+                }else{
+                    pagehtml += '<li><a href="javascript:showpage('+next+')" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>';
+                }
+                $("#authPagelists").html(pagehtml);
+
+            });
+        }
+        window.showpage = showpage;
+    })();
+   //全局缓存对象
+  /* var authData = {};
+    ;(function(){
+        var pageSize = 10;
+       //请求数据,将数据缓存在全局对象中
+        $.get('http://p2pauth.com').done(function(data){
+            authData = data;
+        });
+        function showpage(curpage){
+//              console.log(data.datas);
+            console.log(authData);
+            data = JSON.parse(authData);
+//              console.log(data.datas.length);
+            var itemslength = data.datas.length;//定义总的数据大小
+            var pagecount = Math.ceil(itemslength/pageSize);//定义总的页数
+//              console.log(pagecount);
+            //定义起始下标
+            var start = (curpage - 1) * pageSize;
+            //定义结束下标
+            var end = Math.min(start + pageSize,itemslength);
+            //上一页 在当前页数+1和第一页的最大值产生
+            var pre = Math.max(curpage-1,1);
+            //下一页  在当前页数和总页数最小值之间产生
+            var next = Math.min(curpage+1,pagecount);
+            //保存当前缓存
+            var curitems = [];
+            for(var i = start;i < end;i++){
+                curitems.push(data.datas[i]);
+            }
+//                console.log(curitems);
+            //拼接数据
+            var html = template("Auth_temp",{"data":curitems});
+            //渲染模版
+            $("#authMange").html(html);
+            //分页列表
+            var pagehtml = '';
+            //上一页
+            if(curpage <= 1){
+                pagehtml += '<li class="disabled"><a href="javascript:showpage('+pre+')" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>';
+            }else{
+                pagehtml += '<li><a href="javascript:showpage('+pre+')" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>';
+            }
+
+            //页码
+            for(var i = 1;i <= pagecount;i++){
+                if(curpage == i){
+                    pagehtml += '<li class=" active"><a href="javascript:showpage('+i+')">'+i+'</a></li>'
+                }else{
+                    pagehtml += '<li><a href="javascript:showpage('+i+')">'+i+'</a></li>'
+                }
+            }
+            //下一页
+            if(curpage >= pagecount){
+                pagehtml += '<li class="disabled"><a href="javascript:showpage('+next+')" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>';
+            }else{
+                pagehtml += '<li><a href="javascript:showpage('+next+')" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>';
+            }
+            $("#authPagelists").html(pagehtml);
+        };
+        window.showpage = showpage;
+    })();*/
+    $(function () {
+        //调用显示下拉菜单的方法,显示联系图片
+        $('#contact').tooltip();
+        //请求数据,渲染模版
+        showpage(1);
+        //等待模态框加载完成后在进行表单显示,但是不会同步出现
+        $('#myModal').on('shown.bs.modal',function(e){
+            var btn = e.relatedTarget;
+            var cmd = $(btn).data('cmd');
+            //对模态框
+            if(cmd == 'edit'){
+                var cells = btn.parentElement.parentElement.cells;//找到当前编辑表单的数据
+                console.dir(cells[0].innerText);
+                $('#myModalLabel').text("修改实名验证信息");
+
+                $('.modal-body').load('Auth_form.html #cg_auth_form',function(res,status,xhr){
+                    if(status == 'success'){
+
+                        $("#cg_auth_manage_name").val(cells[0].innerText);
+                        $("#cg_auth_manage_gender").val(cells[1].innerText);
+                        $("#cg_auth_manage_idType").val(cells[2].innerText);
+                        $("#cg_auth_manage_idnum").val(cells[3].innerText);
+                    }
+                });
+            }else if(cmd == 'create'){
+                $('#myModalLabel').text("添加实名用户");
+                $('.modal-body').load('Auth_form.html #cg_auth_form');
+            }
+
+        });
+        //注册提交点击事件,获取表单的值
+        $("#authConfirm").on('click',function(){
+            var username = $("#cg_auth_manage_name").val();
+            var gender   = $("#cg_auth_manage_gender").val();
+            var idType   = $("#cg_auth_manage_idType").val();
+            var idnum    = $("#cg_auth_manage_idnum").val();
+            console.log(username,gender,idType,idnum,$("#cg_auth_form").serialize());
+        });
+
+    })
+</script>
+</html>

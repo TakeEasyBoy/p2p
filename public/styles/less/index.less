@@ -1,0 +1,207 @@
+@charset "UTF-8";
+@basecolor:#00a8ff;
+@basefontcolor:#777;
+@fetureurl:"../images";
+@border_w:1px;
+@border_s:solid;
+//取消响应式中圆角
+@media (min-width: 768px) {
+  .navbar {
+    border-radius: 0px;
+  }
+}
+//头部导航的响应式布局
+@media (max-width: 767px) {
+  .cg-nav{
+    .container{
+      .nav{
+        li{
+          width: 90%;
+        }
+      }
+    }
+  }
+}
+//header
+.cg-header{
+  //去除bottom的margin
+  margin-bottom: 0px;
+  //更改导航hover样式
+  .navbar-nav{
+      li{
+        a{
+          color:#fff;
+        }
+        a:focus,a:hover{
+          color: @basecolor;
+          text-decoration: underline;
+        }
+      }
+  }
+  .navbar-header{
+     //品牌改为白色
+     .navbar-brand {
+      color: #fff;
+       //电话字体大小需要改下
+       i{
+         font-size: 26px;
+         letter-spacing: 1px;
+       }
+    }
+  }
+}
+
+//导航样式
+.cg-nav{
+  //去除bottom的margin
+    margin-bottom: 10px;
+    border-bottom: @border_s @border_w #ccc;
+  .navbar-header{
+    margin-left:  120px;
+    padding-top: 30px;
+    a{
+      img{
+        vertical-align: middle;
+        display: inline-block;
+      }
+    }
+  }
+    .container{
+      .navbar-nav{
+          li{
+            a{
+                color: @basefontcolor;
+                min-width: 80px;
+                line-height: 60px;
+                font-size: 16px;
+                text-align: center;
+              }
+          }
+        //实现当前激活的样式
+        .active{
+          background-color: lighten(@basefontcolor,45%) ;
+        }
+      }
+    }
+}
+
+//内容样式
+.cg-section{
+  .cg-banner{
+    margin-bottom: 10px;
+  }
+  .cg-feature{
+    dt,dd{
+      padding-left: 55px;
+    }
+    .cg-feature-items01{
+        background-image: url("@{fetureurl}/feature01.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    .cg-feature-items02{
+      background-image: url("@{fetureurl}/feature02.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    .cg-feature-items03{
+      background-image: url("@{fetureurl}/feature03.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+}
+//外表格的公共样式
+
+//表格样式
+.cg-table{
+  .panel{
+    //取消外层盒子边框
+    border:@border_w @border_s transparent;
+    .panel-title{
+      border-bottom: @border_w @border_s #ccc;
+      overflow: hidden;
+      .pull-left{
+        float: left !important;
+        font-size: 24px;
+        color:@basecolor;
+        font-weight: bold;
+        border-bottom: @border_w*4 @border_s @basecolor;
+      }
+      ul{
+        li{
+          list-style: none;
+          border-bottom: @border_w dotted #eee;
+
+        }
+      }
+    }
+    //设置表格的title
+    .table{
+      thead{
+        th{
+          border-bottom: @border_s @border_w*2 #ddd;
+        }
+      }
+      tbody{
+        tr{
+          td{
+            font-size: 16px;
+            vertical-align: middle;
+            &:nth-of-type(3),&:nth-of-type(4){
+              color:@basecolor;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//新闻列表
+.cg-news{
+  .panel{
+    //取消外层盒子边框
+    border:@border_w @border_s transparent;
+    .panel-title {
+      border-bottom: @border_w @border_s #ccc;
+      overflow: hidden;
+      .pull-left{
+        font-size: 24px;
+        color: @basecolor;
+        font-weight: bold;
+        border-bottom: @border_w*4 @border_s @basecolor;
+      }
+
+    }
+    ul{
+        margin0: 0;
+        padding:0;
+        li{
+          list-style: none;
+          line-height: 38px;
+          min-height:38px;
+          font-size: 14px;
+          overflow: hidden;
+          border-bottom: @border_w dotted #eee;
+        }
+      }
+    }
+
+}
+
+//footer
+.cg-footer{
+  background-color: #f8f8f8;
+  padding-top: 30px;
+  margin-top: 20px;
+  .row{
+    .col-sm-2{
+      p{
+        img{
+          width: 120px;
+        }
+      }
+    }
+  }
+}
